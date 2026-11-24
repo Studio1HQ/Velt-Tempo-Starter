@@ -1,214 +1,168 @@
-# Tempo + Velt Starter Kit
+<div align="center">
 
-A modern, dark-themed analytics dashboard starter kit built with React, TypeScript, Tailwind CSS, Supabase, Stripe and Velt collaboration features - Powered by **TempoLabs AI**.
+<img src="https://raw.githubusercontent.com/Studio1HQ/Studio1HQ/main/assets/banners/Velt-Tempo-Starter.webp" alt="Tempo and Velt Starter Kit: A dark analytics dashboard starter with Supabase, Stripe and Velt" width="100%" />
 
-![image](https://github.com/user-attachments/assets/bd5a73e6-4cd7-447f-8834-54c3215af2fa)
+<br />
+<br />
 
+# Tempo and Velt Starter Kit
 
-https://github.com/user-attachments/assets/68f9ca13-7bab-479c-9c1c-83cbc1d84926
+### A dark analytics dashboard starter with Supabase, Stripe and Velt
 
+A React and Vite starter with a dark analytics dashboard, Supabase auth and database, Stripe subscriptions and Velt presence, cursors and comments. Built with TempoLabs.
 
+<br />
+
+[![Built by Studio1](https://img.shields.io/badge/Built_by_Studio1-f97316?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAgMTYwIiBmaWxsPSJub25lIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMzVDMCAxNi42ODA3IDE0LjA3NDQgMS42NDg0NCAzMiAwLjEyNjk1M1YxNDFINTEuMDUyM0M1Mi40MzA4IDEzNy4zNDQgNTQuNzQ0NiAxMzMuNjg5IDU3Ljk5MzggMTMwLjAzM0M2MS4xNDQ2IDEyNi41MDggNjQuNjg5MiAxMjMuNDQgNjguNjI3NyAxMjAuODI5QzcyLjU2NjIgMTE4LjM0OSA3Ni4zNTY5IDExNi43ODIgODAgMTE2LjEyOVY4Ni43NTQ0Qzc1LjQ3MDggODcuOTI5MiA3MS4zODQ2IDg5LjY5MTkgNjcuNzQxNSA5Mi4wNDE1QzY0IDk0LjUyMjUgNjAuNzUwOCA5Ny40NiA1Ny45OTM4IDEwMC44NTRDNTYuNTM0NSAxMDIuNzIgNTUuMjU0NSAxMDQuNjU5IDU0LjE1MzkgMTA2LjY3MVYwSDEyNUMxNDQuMzMgMCAxNjAgMTUuNjY5OSAxNjAgMzVWMTI1QzE2MCAxNDQuMzMgMTQ0LjMzIDE2MCAxMjUgMTYwSDEyNFYxOEgxMDQuOTQ4QzEwMy41NjkgMjEuNjgxNiAxMDEuMjU1IDI1LjM2MjggOTguMDA2MiAyOS4wNDQ0Qzk0Ljg1NTQgMzIuNTk0MiA5MS4zMTA4IDM1LjY4NDEgODcuMzcyMyAzOC4zMTRDODMuNDMzOCA0MC44MTIgNzkuNjQzMSA0Mi4zODk2IDc2IDQzLjA0NzRWNzIuNjMwNEM4MC41MjkyIDcxLjQ0NzMgODQuNjE1NCA2OS42NzI0IDg4LjI1ODUgNjcuMzA1N0M5MiA2NC44MDc2IDk1LjI0OTIgNjEuODQ5MSA5OC4wMDYyIDU4LjQzMDdDOTkuNDY1NSA1Ni41NTEzIDEwMC43NDUgNTQuNTk4NiAxMDEuODQ2IDUyLjU3MjNWMTYwSDM1QzE1LjY3IDE2MCAwIDE0NC4zMyAwIDEyNVYzNVoiIGZpbGw9IiNmZmZmZmYiLz48L3N2Zz4K)](https://studio1hq.com)
+[![Built with Velt](https://img.shields.io/badge/Built_with_Velt-141414?style=for-the-badge)](https://velt.dev)
+[![Live demo](https://img.shields.io/badge/Live_demo-1c1917?style=for-the-badge&logo=vercel&logoColor=white)](https://velt-tempo.vercel.app/)
+
+[Velt docs](https://docs.velt.dev) &nbsp;·&nbsp; [Velt](https://velt.dev) &nbsp;·&nbsp; [More examples](https://github.com/Studio1HQ) &nbsp;·&nbsp; [studio1hq.com](https://studio1hq.com)
+
+</div>
+
+<br />
+
+## Overview
+
+This is a dark-themed analytics dashboard starter built with React, TypeScript, Tailwind CSS, Supabase, Stripe and [Velt](https://velt.dev), created with TempoLabs. It gives you auth, subscription billing and a dashboard, with collaboration already wired in.
+
+Velt adds presence awareness, cursor following and comments to the dashboard pages. `VeltProvider` wraps the app and a `VeltAuth` component identifies the signed-in Supabase user. Dashboard pages set a Velt document with `useSetDocument`.
+
+<p align="center"><img src="https://github.com/user-attachments/assets/bd5a73e6-4cd7-447f-8834-54c3215af2fa" alt="Tempo and Velt starter dashboard" width="100%" /></p>
+
+<p align="center"><a href="https://github.com/user-attachments/assets/68f9ca13-7bab-479c-9c1c-83cbc1d84926">Watch the demo video</a></p>
+
+This repo's default branch is `veltic`.
 
 ## Features
 
-- 🌙 **Dark-themed UI**: Sleek, modern interface designed for extended use with reduced eye strain
-- 📊 **Analytics Dashboard**: Interactive visualizations and data insights
-- 🔐 **Authentication**: Complete auth flow with Supabase (sign up, sign in, password reset)
-- 💳 **Subscription Payments**: Integrated Stripe payment processing with subscription plans
-- 👥 **Real-time Collaboration**: Velt integration for presence awareness, react comments and cursor following
-- 🎨 **UI Components**: Comprehensive set of accessible UI components using Radix UI and shadcn/ui
-- 📱 **Responsive Design**: Fully responsive layout that works on all devices
-- 🚀 **Performance**: Built with React + Vite for fast development and optimal performance
-- 🧠 **TempoLabs Integration**: Enhanced development experience with AI-powered tools
+- **Dark-themed UI**: A dashboard designed for long sessions.
+- **Analytics dashboard**: Metric cards, charts, data visualizations, advanced filters, an activity feed and a task board.
+- **Authentication**: Supabase auth with sign up, sign in and protected routes.
+- **Subscription payments**: Stripe checkout and webhooks through Supabase Edge Functions, with Basic, Pro and Enterprise plans.
+- **Velt collaboration**: `VeltPresence`, `VeltCursor`, `VeltComments`, `VeltCommentTool`, `VeltCommentBubble` and a comments sidebar.
+- **UI components**: Radix UI and shadcn/ui components, responsive layout.
+- **TempoLabs integration**: A `tempo.config.json` for visual editing and AI tools.
 
-## About TempoLabs
+## Tech stack
 
-[TempoLabs](https://www.tempo.new/) is a platform where designers and developers collaborate on code. It provides AI-powered tools to build React applications up to 10x faster with features like:
+| Layer | Tool |
+| --- | --- |
+| Framework | [React](https://react.dev), TypeScript, [Vite](https://vitejs.dev), React Router |
+| Collaboration | [Velt](https://velt.dev) (`@veltdev/react`) |
+| Backend and auth | [Supabase](https://supabase.com) (Auth, Database, Edge Functions) |
+| Payments | [Stripe](https://stripe.com) |
+| UI | [Tailwind CSS](https://tailwindcss.com), [shadcn/ui](https://ui.shadcn.com), [Radix UI](https://www.radix-ui.com), React Hook Form with Zod |
+| Dev tools | [TempoLabs](https://www.tempo.new/) |
+| Deployment | [Vercel](https://vercel.com) |
 
-- Visual editing of React components
-- Design system integration
-- AI code generation and assistance
-- Seamless GitHub integration
-- Drag-and-drop interface that feels like a design tool
-
-This starter kit integrates TempoLabs' development tools to enhance workflow and productivity.
-
-## Tech Stack
-
-- **Frontend**: React, TypeScript, Vite
-- **Styling**: Tailwind CSS, shadcn/ui components
-- **Backend**: Supabase (Authentication, Database, Edge Functions)
-- **Payments**: Stripe integration
-- **Collaboration**: Velt for real-time collaboration features
-- **Development Tools**: TempoLabs AI-powered development suite
-- **Routing**: React Router
-- **Forms**: React Hook Form with Zod validation
-
-## Getting Started
+## Getting started
 
 ### Prerequisites
 
-- Node.js (v16+)
+- Node.js 16 or later
 - npm or yarn
-- Supabase account
-- Stripe account (for payment processing)
-- Velt account (for collaboration features)
-- TempoLabs account (for enhanced development experience)
+- A [Supabase](https://supabase.com) account
+- A [Stripe](https://stripe.com) account for payments
+- A [Velt](https://console.velt.dev) account and API key
+- A [TempoLabs](https://www.tempo.new/) account (optional)
 
 ### Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Studio1HQ/Velt-Tempo-Starter.git
-   cd Velt-Tempo-Starter
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. Set up environment variables:
-   Create a `.env` file in the root directory with the following variables:
-   ```
-   VITE_SUPABASE_URL=your_supabase_url
-   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-   VITE_VELT_API_KEY=your_velt_api_key
-   ```
-
-4. Start the development server:
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-5. Open your browser and navigate to `http://localhost:5173`
-
-## Supabase Setup
-
-1. Create a new Supabase project
-2. Set up authentication providers (Email, OAuth, etc.)
-3. Deploy the included Edge Functions:
-   ```bash
-   supabase functions deploy get-plans
-   supabase functions deploy create-checkout
-   supabase functions deploy payments-webhook
-   ```
-
-## Velt Setup
-
-1. Create a Velt account at [velt.dev](https://www.velt.dev/)
-2. Create a new project and get your API key
-3. Add the API key to your `.env` file
-
-## TempoLabs Setup
-
-1. Create a TempoLabs account at [tempo.new](https://www.tempo.new/)
-2. Use TempoLabs' visual editor and AI tools to enhance your development workflow
-3. Checkout complete documentation guide for [Vite React + Supabase + Stripe](https://tempolabsinc.mintlify.app/ViteSupabaseStripe) setup
-
-## Project Structure
-
-```
-├── public/                  # Static assets
-├── src/
-│   ├── components/          # UI components
-│   │   ├── auth/            # Authentication components
-│   │   ├── dashboard/       # Dashboard components
-│   │   ├── pages/           # Page components
-│   │   ├── ui/              # UI components (shadcn/ui)
-│   │   └── velt/            # Velt integration components
-│   ├── context/             # React context providers
-│   ├── lib/                 # Utility functions
-│   ├── types/               # TypeScript type definitions
-│   ├── App.tsx              # Main application component
-│   └── main.tsx             # Application entry point
-├── supabase/
-│   ├── functions/           # Supabase Edge Functions
-│   │   ├── create-checkout/ # Stripe checkout function
-│   │   ├── get-plans/       # Get subscription plans function
-│   │   └── payments-webhook/# Stripe webhook handler
-│   └── migrations/          # Database migrations
-├── tempo.config.json        # TempoLabs configuration
-└── ...                      # Configuration files
+```bash
+git clone https://github.com/Studio1HQ/Velt-Tempo-Starter.git
+cd Velt-Tempo-Starter
+git checkout veltic
+npm install   # or: yarn install
 ```
 
-## Features in Detail
+### Environment variables
 
-### Authentication
+Create a `.env` file in the project root.
 
-The starter kit includes a complete authentication system powered by Supabase Auth, with:
-- Email/password authentication
-- Protected routes
+| Variable | Description |
+| --- | --- |
+| `VITE_SUPABASE_URL` | Supabase project URL. |
+| `VITE_SUPABASE_ANON_KEY` | Supabase anon key. |
+| `VITE_VELT_API_KEY` | Velt API key from the Velt console. |
 
-### Subscription Plans
+The Supabase Edge Functions also read `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` from the function environment.
 
-Integrated Stripe subscription management:
-- Multiple subscription tiers (Basic, Pro, Enterprise)
-- Secure checkout process
-- Webhook integration for subscription events
+### Run
 
-### Analytics Dashboard
+```bash
+npm run dev    # or: yarn dev
+```
 
-A beautiful dark-themed dashboard with:
-- Interactive data visualizations
-- Filtering capabilities
-- User management
-- Settings and profile management
+Open `http://localhost:5173`. Other scripts: `npm run build`, `npm run preview`, `npm run lint`, and `npm run types:supabase` to regenerate Supabase types (needs `SUPABASE_PROJECT_ID`).
 
-### Collaboration Features
+Supabase setup:
 
-Velt integration provides:
-- Presence awareness (see who's online)
-- Cursor following (see where teammates are pointing)
-- React comment and annotations
-- Task management
+1. Create a Supabase project.
+2. Set up authentication providers (email, OAuth and so on).
+3. Deploy the Edge Functions:
 
-### TempoLabs Integration
+```bash
+supabase functions deploy get-plans
+supabase functions deploy create-checkout
+supabase functions deploy payments-webhook
+```
 
-Enhance your development workflow with:
-- Visual editing of React components
-- AI-powered code generation
-- Design system integration
-- Error handling and debugging tools
+For Velt, create a project in the Velt console and add its API key to `.env`. For TempoLabs, create an account at [tempo.new](https://www.tempo.new/) and follow the Vite, Supabase and Stripe guide linked below.
 
-## Customization
+## How it works
 
-### Styling
+```text
+src/
+├── components/
+│   ├── auth/         login, sign up, layout
+│   ├── dashboard/    metric cards, charts, filters, activity feed, task board
+│   ├── landing/      hero, features, pricing, testimonials, footer
+│   ├── pages/        home, dashboard, analytics dashboard, plans, success
+│   ├── ui/           shadcn/ui components
+│   └── velt/         VeltAuth: identifies the Supabase user in Velt
+├── context/          AuthContext
+├── lib/              utilities and constants
+└── types/            Supabase types
+supabase/
+├── functions/        create-checkout, get-plans, payments-webhook
+└── migrations/       initial-setup.sql
+tempo.config.json     TempoLabs configuration
+```
 
-The project uses Tailwind CSS for styling. You can customize the theme in `tailwind.config.js`.
+To add a page, create a component in `src/components/pages` and add its route in `App.tsx`. Theme settings are in `tailwind.config.js`, and UI components can be edited in `src/components/ui`. For deployment on Vercel, push the repo, import it in Vercel and set the environment variables.
 
-### Components
+## Resources
 
-UI components are built with shadcn/ui and can be customized in the `src/components/ui` directory.
+- [Live demo](https://velt-tempo.vercel.app/): the deployed starter.
+- [Velt documentation](https://docs.velt.dev): SDK guides.
+- [Velt](https://velt.dev): product site.
+- [TempoLabs](https://www.tempo.new/): the AI-powered React builder used with this kit.
+- [Tempo guide for Vite, Supabase and Stripe](https://tempolabsinc.mintlify.app/ViteSupabaseStripe): setup documentation.
+- [Supabase](https://supabase.com/docs): auth and Edge Functions docs.
 
-### Adding Pages
+<br />
 
-1. Create a new page component in `src/components/pages`
-2. Add the route in `App.tsx`
+---
 
-## Deployment
+<div align="center">
 
-### Vercel
+<a href="https://studio1hq.com">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Studio1HQ/website/main/brand/studio1-logo-on-dark.svg" />
+    <img src="https://raw.githubusercontent.com/Studio1HQ/website/main/brand/studio1-logo-on-light.svg" alt="Studio1" width="160" />
+  </picture>
+</a>
 
-1. Push your code to GitHub
-2. Import the project in Vercel
-3. Set up environment variables
-4. Deploy
+Built by **[Studio1](https://studio1hq.com)**, the technical content and DevRel partner for devtool teams. Made with [Velt](https://velt.dev).<br />
+Browse more open-source examples at [github.com/Studio1HQ](https://github.com/Studio1HQ).
 
-## Contributing
+[![Website](https://img.shields.io/badge/studio1hq.com-0b0807?style=for-the-badge&logo=googlechrome&logoColor=white)](https://studio1hq.com)
+[![Book a call](https://img.shields.io/badge/Book_a_strategy_call-f97316?style=for-the-badge&logo=googlecalendar&logoColor=white)](https://cal.com/studio1/collab)
+[![X](https://img.shields.io/badge/%40Studio1HQ-141414?style=for-the-badge&logo=x&logoColor=white)](https://x.com/Studio1HQ)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/studio1hq/)
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+<sub><a href="https://studio1hq.com">studio1hq.com</a> · Technical content, docs, video and DevRel for devtools</sub>
 
-## Acknowledgements
-
-- [TempoLabs](https://www.tempo.new/) for AI-powered development tools
-- [Supabase](https://supabase.io/) for authentication and backend services
-- [Velt](https://www.velt.dev/) for collaboration features
-- [shadcn/ui](https://ui.shadcn.com/) for UI components
-- [Tailwind CSS](https://tailwindcss.com/) for styling
-- [Vite](https://vitejs.dev/) for the build system
-- [Stripe](https://stripe.com/) for payment processing
+</div>
